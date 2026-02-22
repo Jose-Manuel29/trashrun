@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://cf7hln35a5iwp"]
+
+[ext_resource type="Script" uid="uid://b4s0q7u7jjgfy" path="res://scripts/ui/question_screen.gd" id="1_hl27a"]
+[ext_resource type="Texture2D" uid="uid://cmc2028tdvvsv" path="res://assets/fondo/Fondo.png" id="2_hl27a"]
+[ext_resource type="Texture2D" uid="uid://bp5kj3yj5csk6" path="res://assets/persons/Niño.png" id="3_j7mof"]
+[ext_resource type="Texture2D" uid="uid://cyyiao3qmbrsc" path="res://assets/fondo/fondooo.png" id="4_posyd"]
+[ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="5_6v5jo"]
+[ext_resource type="FontFile" uid="uid://bsg8u3sfpq01q" path="res://assets/fonts/Jersey15-Regular.ttf" id="6_rm21n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u2spd"]
+texture = ExtResource("4_posyd")
+modulate_color = Color(0.7133844, 0.47174865, 0.36353326, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e0pcj"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdsjp"]
+bg_color = Color(0.7792569, 0.14263415, 0.10428832, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.5379302, 0.13851973, 0.16908875, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk0j3"]
+bg_color = Color(0.06435505, 0.45127577, 0.90474194, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rg5fc"]
+bg_color = Color(0.6335298, 0.63353, 1.92523e-07, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tgs6"]
+bg_color = Color(0.17891109, 0.5239849, 0.2615655, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_posyd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_posyd"]
+font = ExtResource("5_6v5jo")
+font_size = 23
+font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="JuegoPrincipal" type="Node2D" unique_id=1492252124]
+position = Vector2(1390, 778)
+script = ExtResource("1_hl27a")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1451713000]
+offset_left = -1386.9999
+offset_top = -778.0
+offset_right = 533.0001
+offset_bottom = 199.32172
+rotation = 0.008726646
+scale = Vector2(0.63, 0.733)
+texture = ExtResource("2_hl27a")
+
+[node name="Jugador1" type="CharacterBody2D" parent="." unique_id=1260316316]
+position = Vector2(-1345, -591)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador1" unique_id=186597911]
+position = Vector2(16, -33)
+scale = Vector2(1.1734494, 0.79046196)
+texture = ExtResource("3_j7mof")
+hframes = 4
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador1" unique_id=1296546175]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447547660]
+
+[node name="PanelPregunta" type="Control" parent="CanvasLayer" unique_id=1657296904]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1390.0
+offset_top = 778.0
+offset_right = 1430.0
+offset_bottom = 818.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PanelPregunta" unique_id=1433516947]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -34.686
+anchor_top = -19.519001
+anchor_right = -34.686
+anchor_bottom = -19.519001
+offset_left = 327.44006
+offset_top = 175.76001
+offset_right = 793.44006
+offset_bottom = 442.76
+theme_override_styles/panel = SubResource("StyleBoxTexture_u2spd")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1609404692]
+layout_mode = 0
+offset_left = -1028.0
+offset_top = -582.0
+offset_right = -621.0
+offset_bottom = -480.0
+theme_override_fonts/font = ExtResource("5_6v5jo")
+text = "Cuanto es 8x2"
+label_settings = SubResource("LabelSettings_e0pcj")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 6
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelPregunta" unique_id=203969889]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.4150002
+anchor_right = -3.3720002
+offset_left = -892.4
+offset_top = -460.0
+offset_right = -494.12
+offset_bottom = -376.0
+columns = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=2066969035]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_tdsjp")
+text = "a"
+
+[node name="Button2" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=581575236]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_mk0j3")
+text = "b"
+
+[node name="Button3" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=64708346]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rg5fc")
+text = "c"
+
+[node name="Button4" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=871285801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_7tgs6")
+text = "x"
+
+[node name="LabelTurno" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1467142979]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -24.325
+anchor_top = -17.75
+anchor_right = -16.5375
+anchor_bottom = -15.425
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_rm21n")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_posyd")
+text = "Turno: Jugador 1"
+label_settings = SubResource("LabelSettings_posyd")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PosicionJ2_1" type="Marker2D" parent="." unique_id=1722205681]
+position = Vector2(-1296, -496)
+
+[node name="PosicionJ2_2" type="Marker2D" parent="." unique_id=1677270074]
+position = Vector2(-1253, -459)
+
+[node name="PosicionJ2_0" type="Marker2D" parent="." unique_id=1354465409]
+position = Vector2(-1308, -540)
+
+[node name="PosicionJ2_3" type="Marker2D" parent="." unique_id=298214999]
+position = Vector2(-1207, -421)
+
+[node name="PosicionJ2_4" type="Marker2D" parent="." unique_id=1099499352]
+position = Vector2(-1154, -379)
+
+[node name="PosicionJ2_5" type="Marker2D" parent="." unique_id=198195049]
+position = Vector2(-1090, -336)
+
+[node name="PosicionJ2_6" type="Marker2D" parent="." unique_id=505256956]
+position = Vector2(-1003, -287)
+
+[node name="Jugador2" type="CharacterBody2D" parent="." unique_id=1803384298]
+position = Vector2(-332, -578)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador2" unique_id=1721905866]
+position = Vector2(13.555176, -56.58368)
+scale = Vector2(1.2954284, 0.95520395)
+texture = ExtResource("3_j7mof")
+hframes = 4
+vframes = 3
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador2" unique_id=1113380992]
+
+[node name="PosicionJ1_0" type="Marker2D" parent="." unique_id=1234222974]
+position = Vector2(-334, -576)
+
+[node name="PosicionJ1_1" type="Marker2D" parent="." unique_id=68500073]
+position = Vector2(-351, -512)
+
+[node name="PosicionJ1_2" type="Marker2D" parent="." unique_id=557608059]
+position = Vector2(-401, -457)
+
+[node name="PosicionJ1_3" type="Marker2D" parent="." unique_id=147888934]
+position = Vector2(-449, -419)
+
+[node name="PosicionJ1_4" type="Marker2D" parent="." unique_id=664146924]
+position = Vector2(-503, -375)
+
+[node name="PosicionJ1_5" type="Marker2D" parent="." unique_id=1177882589]
+position = Vector2(-553, -334)
+
+[node name="PosicionJ1_6" type="Marker2D" parent="." unique_id=1517693821]
+position = Vector2(-640, -283)
+
+[node name="pause" type="Button" parent="." unique_id=852748884]
+offset_left = -245.0
+offset_top = -750.0
+offset_right = -209.0
+offset_bottom = -719.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 0, 0.4)
+text = "ll"

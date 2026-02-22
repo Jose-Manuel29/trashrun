@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://dgmtsno3hn5gu"]
+
+[ext_resource type="Texture2D" uid="uid://bcjpkr8prknur" path="res://assets/fondo/log.jpg" id="1_63ry6"]
+[ext_resource type="Script" uid="uid://bit87cvxn4gu5" path="res://scripts/ui/name_screen.gd" id="1_pj62m"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="2_pj62m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ujct"]
+bg_color = Color(0.09803922, 0.09803922, 0.09803922, 0.5568628)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osr5e"]
+bg_color = Color(0.09803922, 0.09803922, 0.09803922, 0.5568628)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pj62m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2kk6v"]
+
+[node name="NameScreen" type="Control" unique_id=40951509]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pj62m")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=624394403]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1200.0
+offset_bottom = 716.0
+texture = ExtResource("1_63ry6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=626911948]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 50.0
+offset_right = 1338.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+theme_override_font_sizes/font_size = 30
+text = "Ingresa tu nombre y selecciona el modo de juego"
+
+[node name="BtnPsicologia" type="Button" parent="." unique_id=1559719065]
+modulate = Color(1, 1, 0.9490196, 1)
+self_modulate = Color(0.9843137, 1, 0.85490197, 0.7529412)
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 411.0
+offset_right = 571.0
+offset_bottom = 578.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_pj62m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ujct")
+text = "Psicologia"
+flat = true
+
+[node name="BtnResiduos" type="Button" parent="." unique_id=1892691687]
+self_modulate = Color(3.46821, 18.892157, 18.892157, 0.7764706)
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 622.0
+offset_top = 409.0
+offset_right = 1144.0
+offset_bottom = 579.0
+theme_override_constants/outline_size = 20
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_pj62m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_osr5e")
+text = "Residuos"
+flat = true
+
+[node name="return" type="Button" parent="." unique_id=361223551]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 633.0
+offset_right = 307.0
+offset_bottom = 681.0
+theme_override_font_sizes/font_size = 25
+text = "Regresar"
+flat = true
+
+[node name="jugar" type="Button" parent="." unique_id=1894140197]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 636.0
+offset_right = 712.0
+offset_bottom = 685.0
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.03529412, 0.8745098, 0.5019608)
+theme_override_font_sizes/font_size = 25
+text = "	Jugar"
+flat = true
+
+[node name="salir" type="Button" parent="." unique_id=794514710]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 636.0
+offset_right = 1102.0
+offset_bottom = 674.0
+theme_override_font_sizes/font_size = 25
+text = "	Salir"
+flat = true
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1015465396]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 212.0
+offset_right = 583.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pj62m")
+placeholder_text = "Jugador 1"
+
+[node name="LineEdit2" type="LineEdit" parent="." unique_id=756974594]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 212.0
+offset_right = 830.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2kk6v")
+placeholder_text = "Jugador 2"
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="jugar" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
