@@ -4,6 +4,7 @@ var player1_name := ""
 var player2_name := ""
 var category := ""
 
+var tiempo_maximo = 10
 var score_p1 := 0
 var score_p2 := 0
 

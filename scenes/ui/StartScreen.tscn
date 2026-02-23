@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://sp5y2bh6klwm"]
+[gd_scene load_steps=13 format=4 uid="uid://sp5y2bh6klwm"]
 
 [ext_resource type="Script" uid="uid://c1e76xw8vfl2x" path="res://scripts/ui/start_screen.gd" id="1_8qqbg"]
 [ext_resource type="FontFile" uid="uid://eayk6wrnp05w" path="res://assets/fonts/Modak-Regular.ttf" id="1_r6ble"]
@@ -37,15 +37,6 @@ font_name = "Bitcount Grid Double Cursive Medium"
 style_name = "Medium"
 font_weight = 500
 msdf_pixel_range = 8
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 14.0
 cache/0/16/0/descent = 6.0
 cache/0/16/0/underline_position = 1.59375
@@ -219,12 +210,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="StartScreen" type="Control" unique_id=1330889566]
+[node name="StartScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 1
 script = ExtResource("1_8qqbg")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=80592265]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 4.0
@@ -233,7 +225,7 @@ offset_bottom = 728.0
 texture = ExtResource("2_j8j1s")
 expand_mode = 1
 
-[node name="Jugar" type="Button" parent="." unique_id=1446149868]
+[node name="Jugar" type="Button" parent="."]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 0
 offset_left = 471.0
@@ -250,7 +242,7 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_84hrd")
 text = "Jugar"
 
-[node name="Ranking" type="Button" parent="." unique_id=2107573463]
+[node name="Ranking" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 1
 anchors_preset = 15
@@ -270,7 +262,7 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_eokdo")
 text = "Ranking"
 
-[node name="Configuración" type="Button" parent="." unique_id=2129975771]
+[node name="Configuración" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 15
@@ -290,7 +282,7 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_bbtte")
 text = "Configuracion"
 
-[node name="salir" type="Button" parent="." unique_id=1966868625]
+[node name="salir" type="Button" parent="."]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -310,7 +302,7 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_37lio")
 text = "Salir"
 
-[node name="Subtitulo" type="Label" parent="." unique_id=379691805]
+[node name="Subtitulo" type="Label" parent="."]
 modulate = Color(0.33660764, 0.3366076, 0.3366076, 1)
 layout_mode = 0
 offset_left = 303.0
