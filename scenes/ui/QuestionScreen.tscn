@@ -2,18 +2,22 @@
 
 [ext_resource type="Script" uid="uid://b4s0q7u7jjgfy" path="res://scripts/ui/question_screen.gd" id="1_hl27a"]
 [ext_resource type="Texture2D" uid="uid://cmc2028tdvvsv" path="res://assets/fondo/Fondo.png" id="2_hl27a"]
-[ext_resource type="Texture2D" uid="uid://bp5kj3yj5csk6" path="res://assets/persons/Niño.png" id="3_j7mof"]
+[ext_resource type="Texture2D" uid="uid://bp5kj3yj5csk6" path="res://assets/persons/Nin╠âo.png" id="3_j7mof"]
+[ext_resource type="Texture2D" uid="uid://b4jtw01f7sgxi" path="res://assets/Utiles/Progreso.png" id="3_rm21n"]
 [ext_resource type="Texture2D" uid="uid://cyyiao3qmbrsc" path="res://assets/fondo/fondooo.png" id="4_posyd"]
 [ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="5_6v5jo"]
 [ext_resource type="FontFile" uid="uid://bsg8u3sfpq01q" path="res://assets/fonts/Jersey15-Regular.ttf" id="6_rm21n"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="7_6v5jo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u2spd"]
 texture = ExtResource("4_posyd")
 modulate_color = Color(0.7133844, 0.47174865, 0.36353326, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e0pcj"]
-font_size = 40
+line_spacing = 0.0
+font_size = 20
 font_color = Color(0, 0, 0, 1)
+shadow_size = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdsjp"]
 bg_color = Color(0.7792569, 0.14263415, 0.10428832, 1)
@@ -53,34 +57,52 @@ font_size = 23
 font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="JuegoPrincipal" type="Node2D" unique_id=1492252124]
+[sub_resource type="LabelSettings" id="LabelSettings_rm21n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u2spd"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tdsjp"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="JuegoPrincipal" type="Node2D" unique_id=1747045572]
 position = Vector2(1390, 778)
 script = ExtResource("1_hl27a")
 
-[node name="Fondo" type="TextureRect" parent="." unique_id=1451713000]
-offset_left = -1386.9999
-offset_top = -778.0
-offset_right = 533.0001
-offset_bottom = 199.32172
+[node name="Fondo" type="TextureRect" parent="." unique_id=1584202502]
+offset_left = -1389.9999
+offset_top = -779.99994
+offset_right = 530.0001
+offset_bottom = 197.32178
 rotation = 0.008726646
 scale = Vector2(0.63, 0.733)
 texture = ExtResource("2_hl27a")
 
-[node name="Jugador1" type="CharacterBody2D" parent="." unique_id=1260316316]
+[node name="Fondo" type="TextureRect" parent="Fondo" unique_id=896144061]
+layout_mode = 0
+offset_left = 509.5183
+offset_top = -2.4573755
+offset_right = 1750.8491
+offset_bottom = 272.02072
+scale = Vector2(0.63, 0.733)
+texture = ExtResource("3_rm21n")
+expand_mode = 3
+
+[node name="Jugador1" type="CharacterBody2D" parent="." unique_id=1612499845]
 position = Vector2(-1345, -591)
 
-[node name="Sprite2D" type="Sprite2D" parent="Jugador1" unique_id=186597911]
+[node name="Sprite2D" type="Sprite2D" parent="Jugador1" unique_id=1270889369]
 position = Vector2(16, -33)
 scale = Vector2(1.1734494, 0.79046196)
 texture = ExtResource("3_j7mof")
 hframes = 4
 vframes = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador1" unique_id=1296546175]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador1" unique_id=1957943180]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447547660]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1802170834]
 
-[node name="PanelPregunta" type="Control" parent="CanvasLayer" unique_id=1657296904]
+[node name="PanelPregunta" type="Control" parent="CanvasLayer" unique_id=310625028]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1390.0
@@ -88,7 +110,7 @@ offset_top = 778.0
 offset_right = 1430.0
 offset_bottom = 818.0
 
-[node name="Panel" type="Panel" parent="CanvasLayer/PanelPregunta" unique_id=1433516947]
+[node name="Panel" type="Panel" parent="CanvasLayer/PanelPregunta" unique_id=322476953]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -34.686
@@ -101,66 +123,76 @@ offset_right = 793.44006
 offset_bottom = 442.76
 theme_override_styles/panel = SubResource("StyleBoxTexture_u2spd")
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1609404692]
+[node name="Label" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=259533476]
 layout_mode = 0
-offset_left = -1028.0
-offset_top = -582.0
-offset_right = -621.0
-offset_bottom = -480.0
+offset_left = -1029.0
+offset_top = -581.0
+offset_right = -622.0
+offset_bottom = -505.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("5_6v5jo")
+theme_override_font_sizes/font_size = 12
 text = "Cuanto es 8x2"
 label_settings = SubResource("LabelSettings_e0pcj")
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 autowrap_mode = 2
 text_overrun_behavior = 6
+max_lines_visible = 2
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelPregunta" unique_id=203969889]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelPregunta" unique_id=805659877]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -3.4150002
 anchor_right = -3.3720002
-offset_left = -892.4
-offset_top = -460.0
-offset_right = -494.12
+offset_left = -899.4
+offset_top = -476.0
+offset_right = -481.12
 offset_bottom = -376.0
 columns = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=2066969035]
+[node name="Button" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=1585267161]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_tdsjp")
 text = "a"
+autowrap_mode = 2
 
-[node name="Button2" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=581575236]
+[node name="Button2" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=1670763308]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_mk0j3")
 text = "b"
+autowrap_mode = 2
 
-[node name="Button3" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=64708346]
+[node name="Button3" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=332889074]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_rg5fc")
 text = "c"
+autowrap_mode = 2
 
-[node name="Button4" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=871285801]
+[node name="Button4" type="Button" parent="CanvasLayer/PanelPregunta/GridContainer" unique_id=1364723072]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_7tgs6")
 text = "x"
 
-[node name="LabelTurno" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1467142979]
+[node name="LabelTurno" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=444813727]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -24.325
-anchor_top = -17.75
-anchor_right = -16.5375
-anchor_bottom = -15.425
+anchor_left = -24.075
+anchor_top = -16.875
+anchor_right = -16.2875
+anchor_bottom = -14.55
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("6_rm21n")
 theme_override_font_sizes/font_size = 32
@@ -172,31 +204,95 @@ vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="PosicionJ2_1" type="Marker2D" parent="." unique_id=1722205681]
+[node name="LabelTimer" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1601774809]
+layout_mode = 0
+offset_left = -856.0
+offset_top = -689.0
+offset_right = -788.0
+offset_bottom = -661.0
+theme_override_fonts/font = ExtResource("7_6v5jo")
+theme_override_font_sizes/font_size = 59
+text = "10 Seg"
+label_settings = SubResource("LabelSettings_rm21n")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgresoJ1" type="HBoxContainer" parent="CanvasLayer/PanelPregunta" unique_id=7779470]
+layout_mode = 0
+offset_left = -1037.0
+offset_top = -680.0
+offset_right = -878.0
+offset_bottom = -661.0
+alignment = 1
+
+[node name="ProgresoJ2" type="HBoxContainer" parent="CanvasLayer/PanelPregunta" unique_id=2103632873]
+layout_mode = 0
+offset_left = -754.0
+offset_top = -679.0
+offset_right = -606.0
+offset_bottom = -655.0
+
+[node name="BarraTiempo" type="ProgressBar" parent="CanvasLayer/PanelPregunta" unique_id=1025560562]
+layout_mode = 0
+offset_left = -974.0
+offset_top = -337.0
+offset_right = -659.0
+offset_bottom = -301.0
+
+[node name="PuntajeJ1" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1969877083]
+layout_mode = 0
+offset_left = -1362.0
+offset_top = -693.0
+offset_right = -1170.0
+offset_bottom = -662.0
+theme_override_fonts/font = ExtResource("7_6v5jo")
+text = "Jugador1: 200 Puntos"
+label_settings = SubResource("LabelSettings_u2spd")
+
+[node name="PuntajeJ2" type="Label" parent="CanvasLayer/PanelPregunta" unique_id=1339249668]
+layout_mode = 0
+offset_left = -388.0
+offset_top = -685.0
+offset_right = -196.0
+offset_bottom = -662.0
+theme_override_fonts/font = ExtResource("7_6v5jo")
+text = "Jugador1: 200 Puntos"
+label_settings = SubResource("LabelSettings_tdsjp")
+
+[node name="pausa" type="Button" parent="CanvasLayer" unique_id=2018976538]
+process_mode = 3
+offset_left = 1082.0
+offset_top = 23.0
+offset_right = 1122.0
+offset_bottom = 62.0
+text = "II"
+
+[node name="PosicionJ2_1" type="Marker2D" parent="." unique_id=877273561]
 position = Vector2(-1296, -496)
 
-[node name="PosicionJ2_2" type="Marker2D" parent="." unique_id=1677270074]
+[node name="PosicionJ2_2" type="Marker2D" parent="." unique_id=2126455204]
 position = Vector2(-1253, -459)
 
-[node name="PosicionJ2_0" type="Marker2D" parent="." unique_id=1354465409]
+[node name="PosicionJ2_0" type="Marker2D" parent="." unique_id=27269759]
 position = Vector2(-1308, -540)
 
-[node name="PosicionJ2_3" type="Marker2D" parent="." unique_id=298214999]
+[node name="PosicionJ2_3" type="Marker2D" parent="." unique_id=1557259535]
 position = Vector2(-1207, -421)
 
-[node name="PosicionJ2_4" type="Marker2D" parent="." unique_id=1099499352]
+[node name="PosicionJ2_4" type="Marker2D" parent="." unique_id=665501349]
 position = Vector2(-1154, -379)
 
-[node name="PosicionJ2_5" type="Marker2D" parent="." unique_id=198195049]
+[node name="PosicionJ2_5" type="Marker2D" parent="." unique_id=615443977]
 position = Vector2(-1090, -336)
 
-[node name="PosicionJ2_6" type="Marker2D" parent="." unique_id=505256956]
+[node name="PosicionJ2_6" type="Marker2D" parent="." unique_id=1452815141]
 position = Vector2(-1003, -287)
 
-[node name="Jugador2" type="CharacterBody2D" parent="." unique_id=1803384298]
+[node name="Jugador2" type="CharacterBody2D" parent="." unique_id=1571773141]
 position = Vector2(-332, -578)
 
-[node name="Sprite2D" type="Sprite2D" parent="Jugador2" unique_id=1721905866]
+[node name="Sprite2D" type="Sprite2D" parent="Jugador2" unique_id=1663253623]
 position = Vector2(13.555176, -56.58368)
 scale = Vector2(1.2954284, 0.95520395)
 texture = ExtResource("3_j7mof")
@@ -204,33 +300,30 @@ hframes = 4
 vframes = 3
 frame = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador2" unique_id=1113380992]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador2" unique_id=1039989797]
 
-[node name="PosicionJ1_0" type="Marker2D" parent="." unique_id=1234222974]
+[node name="PosicionJ1_0" type="Marker2D" parent="." unique_id=1209516750]
 position = Vector2(-334, -576)
 
-[node name="PosicionJ1_1" type="Marker2D" parent="." unique_id=68500073]
+[node name="PosicionJ1_1" type="Marker2D" parent="." unique_id=867748354]
 position = Vector2(-351, -512)
 
-[node name="PosicionJ1_2" type="Marker2D" parent="." unique_id=557608059]
+[node name="PosicionJ1_2" type="Marker2D" parent="." unique_id=1376681922]
 position = Vector2(-401, -457)
 
-[node name="PosicionJ1_3" type="Marker2D" parent="." unique_id=147888934]
+[node name="PosicionJ1_3" type="Marker2D" parent="." unique_id=1268612096]
 position = Vector2(-449, -419)
 
-[node name="PosicionJ1_4" type="Marker2D" parent="." unique_id=664146924]
+[node name="PosicionJ1_4" type="Marker2D" parent="." unique_id=987197971]
 position = Vector2(-503, -375)
 
-[node name="PosicionJ1_5" type="Marker2D" parent="." unique_id=1177882589]
+[node name="PosicionJ1_5" type="Marker2D" parent="." unique_id=1892836217]
 position = Vector2(-553, -334)
 
-[node name="PosicionJ1_6" type="Marker2D" parent="." unique_id=1517693821]
+[node name="PosicionJ1_6" type="Marker2D" parent="." unique_id=1459519252]
 position = Vector2(-640, -283)
 
-[node name="pause" type="Button" parent="." unique_id=852748884]
-offset_left = -245.0
-offset_top = -750.0
-offset_right = -209.0
-offset_bottom = -719.0
-theme_override_colors/icon_disabled_color = Color(1, 1, 0, 0.4)
-text = "ll"
+[node name="TimerPregunta" type="Timer" parent="." unique_id=2017860222]
+editor_description = "Tifffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+
+[connection signal="timeout" from="TimerPregunta" to="." method="_on_timer_pregunta_timeout"]

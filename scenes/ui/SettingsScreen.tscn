@@ -1,5 +1,70 @@
 [gd_scene format=3 uid="uid://d1hcvsw76xdk5"]
 
-[node name="SettingsScreen" type="Control"]
+[ext_resource type="Script" uid="uid://dwfp5cmpflolw" path="res://scenes/ui/settings_screen.gd" id="1_ajtmc"]
+[ext_resource type="Texture2D" uid="uid://dgskacbj4wa65" path="res://assets/fondo/Gemini_Generated_Image_clyai4clyai4clya.png" id="2_ejgwm"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="3_o7p01"]
+[ext_resource type="Texture2D" uid="uid://8v10e41ki4p" path="res://scenes/ui/Captura_de_pantalla_2026-03-15_143349-removebg-preview.png" id="4_hs5wr"]
+[ext_resource type="Texture2D" uid="uid://c6l5ikdyir7ru" path="res://scenes/ui/image-removebg-preview (2).png" id="5_ititl"]
+
+[sub_resource type="FontVariation" id="FontVariation_6etu7"]
+base_font = ExtResource("3_o7p01")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fq24e"]
+bg_color = Color(0.27450982, 0.27450982, 0.27450982, 0.39607844)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="SettingsScreen" type="Control" unique_id=745088672]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_ajtmc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2119743333]
+layout_mode = 0
+offset_left = -111.0
+offset_top = -4.0
+offset_right = 1345.0
+offset_bottom = 727.0
+texture = ExtResource("2_ejgwm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1212722245]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 510.0
+offset_right = 925.0
+offset_bottom = 672.0
+
+[node name="BtnCargarJSON" type="Button" parent="VBoxContainer" unique_id=1451819465]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = SubResource("FontVariation_6etu7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_fq24e")
+text = "Cargar JSON de preguntas"
+
+[node name="LabelEstado" type="Label" parent="VBoxContainer" unique_id=1268309444]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=3070491]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 581.0
+offset_right = 399.0
+offset_bottom = 731.0
+
+[node name="BtnRegresar" type="Button" parent="HBoxContainer" unique_id=1727511009]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("4_hs5wr")
+flat = true
+
+[node name="BtnSalir" type="Button" parent="HBoxContainer" unique_id=228505629]
+layout_mode = 2
+icon = ExtResource("5_ititl")
+flat = true
+
+[node name="FileDialogJSON" type="FileDialog" parent="." unique_id=593074697]

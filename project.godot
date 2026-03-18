@@ -15,13 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Kahot_Trash Run"
-run/main_scene="uid://drn68vh6udk18"
+run/main_scene="uid://sp5y2bh6klwm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://nttlnbxi3vms"
+GameManager="*res://scripts/core/game_manager.gd"
 
 [display]
 

@@ -38,12 +38,13 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=626911948]
 layout_mode = 0
-offset_left = 239.0
+offset_left = 233.0
 offset_top = 50.0
-offset_right = 1338.0
-offset_bottom = 119.0
+offset_right = 967.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_pj62m")
+theme_override_font_sizes/font_size = 26
 text = "Ingresa tu nombre y selecciona el modo de juego"
 
 [node name="BtnPsicologia" type="Button" parent="." unique_id=1559719065]
@@ -90,9 +91,9 @@ flat = true
 
 [node name="jugar" type="Button" parent="." unique_id=1894140197]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 636.0
-offset_right = 712.0
+offset_left = 482.0
+offset_top = 625.0
+offset_right = 711.0
 offset_bottom = 685.0
 theme_override_colors/font_disabled_color = Color(0.8745098, 0.03529412, 0.8745098, 0.5019608)
 theme_override_font_sizes/font_size = 25
@@ -111,13 +112,14 @@ flat = true
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1015465396]
 layout_mode = 0
-offset_left = 393.0
-offset_top = 212.0
-offset_right = 583.0
-offset_bottom = 248.0
+offset_left = 390.0
+offset_top = 211.0
+offset_right = 593.0
+offset_bottom = 247.0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pj62m")
 placeholder_text = "Jugador 1"
+alignment = 1
 
 [node name="LineEdit2" type="LineEdit" parent="." unique_id=756974594]
 layout_mode = 0
@@ -128,6 +130,7 @@ offset_bottom = 248.0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2kk6v")
 placeholder_text = "Jugador 2"
+alignment = 1
 
 [connection signal="pressed" from="return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="jugar" to="." method="_on_play_pressed"]

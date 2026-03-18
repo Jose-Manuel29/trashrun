@@ -1,0 +1,10 @@
+res://scenes/ui/QuestionScreen.tscn
+res://scenes/ui/SettingsScreen.tscn
+res://scenes/ui/NameScreen.tscn
+res://scenes/ui/StartScreen.tscn
+res://scripts/ui/question_screen.gd
+res://scripts/ui/start_screen.gd
+res://scripts/ui/name_screen.gd
+res://scenes/ui/pausemenu.tscn
+res://scenes/ui/pausemenu.gd
+res://scenes/ui/canvas_layer.gd

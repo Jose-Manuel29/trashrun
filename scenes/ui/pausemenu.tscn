@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bjbjp2sbve700"]
+
+[ext_resource type="Script" uid="uid://d7urcteeyxgt" path="res://scenes/ui/canvas_layer.gd" id="1_i6c16"]
+[ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="2_ngfcr"]
+[ext_resource type="FontFile" uid="uid://d3cyf5x6ei7fd" path="res://assets/fonts/Ubuntu-Medium.ttf" id="3_cvfoq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qs6lm"]
+font = ExtResource("2_ngfcr")
+font_size = 52
+
+[sub_resource type="FontVariation" id="FontVariation_lbfru"]
+base_font = ExtResource("3_cvfoq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6c16"]
+bg_color = Color(0.33333334, 0.6509804, 0.7372549, 0.7294118)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="FontVariation" id="FontVariation_eu5yq"]
+base_font = ExtResource("3_cvfoq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngfcr"]
+bg_color = Color(0.015374358, 0.28029618, 0.42345387, 0.9607843)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="FontVariation" id="FontVariation_uu4i1"]
+base_font = ExtResource("3_cvfoq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvfoq"]
+bg_color = Color(0.98039216, 0.34509805, 0.4509804, 0.35686275)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="PAUSEMENU" type="Control" unique_id=2142591219]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=582168047]
+process_mode = 2
+layer = 20
+script = ExtResource("1_i6c16")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2143920959]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06946043, 0.052820645, 0.020600088, 0.27450982)
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2011637495]
+offset_left = 342.0
+offset_top = 188.0
+offset_right = 857.0
+offset_bottom = 532.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1574220382]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 512.0
+offset_bottom = 124.0
+text = "JUEGO PAUSADO"
+label_settings = SubResource("LabelSettings_qs6lm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=554446253]
+process_mode = 2
+layout_mode = 0
+offset_left = 98.0
+offset_top = 132.0
+offset_right = 407.0
+offset_bottom = 315.0
+theme_override_constants/separation = 14
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=915518820]
+process_mode = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_lbfru")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i6c16")
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1472979124]
+process_mode = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_eu5yq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ngfcr")
+text = "Reiniciar
+"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1901408652]
+process_mode = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_uu4i1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvfoq")
+text = "Salir"
