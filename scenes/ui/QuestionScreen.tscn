@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4s0q7u7jjgfy" path="res://scripts/ui/question_screen.gd" id="1_hl27a"]
 [ext_resource type="Texture2D" uid="uid://cmc2028tdvvsv" path="res://assets/fondo/Fondo.png" id="2_hl27a"]
-[ext_resource type="Texture2D" uid="uid://bp5kj3yj5csk6" path="res://assets/persons/Nin╠âo.png" id="3_j7mof"]
+[ext_resource type="Texture2D" uid="uid://bp5kj3yj5csk6" path="res://assets/persons/Niño.png" id="3_j7mof"]
 [ext_resource type="Texture2D" uid="uid://b4jtw01f7sgxi" path="res://assets/Utiles/Progreso.png" id="3_rm21n"]
 [ext_resource type="Texture2D" uid="uid://cyyiao3qmbrsc" path="res://assets/fondo/fondooo.png" id="4_posyd"]
 [ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="5_6v5jo"]

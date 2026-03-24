@@ -26,22 +26,30 @@ func _on_cargar_pressed() -> void:
 	file_dialog.popup_centered(Vector2(600, 400))
 
 func _on_file_selected(path: String) -> void:
-	# Leemos el archivo JSON seleccionado
 	var file = FileAccess.open(path, FileAccess.READ)
+	
 	if file:
 		var content = file.get_as_text()
 		var json_data = JSON.parse_string(content)
 		
-		# Validamos que el JSON no esté vacío y sea válido
-		if json_data != null:
-			GameManager.questions = json_data # Guardamos las preguntas en el GameManager
-			lbl_estado.text = "¡Preguntas cargadas con éxito!"
-			lbl_estado.modulate = Color(0, 1, 0) # Texto en verde
+		# 🔥 VALIDACIÓN REAL
+		if typeof(json_data) == TYPE_ARRAY and json_data.size() > 0:
+			
+			# Validamos estructura de la primera pregunta
+			if json_data[0].has("question") and json_data[0].has("options") and json_data[0].has("correct_index"):
+				
+				GameManager.questions = json_data
+				lbl_estado.text = "¡Preguntas cargadas con éxito!"
+				lbl_estado.modulate = Color(0, 1, 0)
+				
+			else:
+				lbl_estado.text = "Formato incorrecto: faltan campos."
+				lbl_estado.modulate = Color(1, 0, 0)
 		else:
-			lbl_estado.text = "Error: El archivo JSON no tiene un formato válido."
-			lbl_estado.modulate = Color(1, 0, 0) # Texto en rojo
+			lbl_estado.text = "JSON inválido o vacío."
+			lbl_estado.modulate = Color(1, 0, 0)
 	else:
-		lbl_estado.text = "Error al intentar abrir el archivo."
+		lbl_estado.text = "Error al abrir archivo."
 
 func _on_regresar_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ui/StartScreen.tscn")

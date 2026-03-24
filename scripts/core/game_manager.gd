@@ -11,6 +11,7 @@ var score_p2 := 0
 var current_question_index := 0
 var questions := []
 
+# --- RESET DE LA PARTIDA ---
 func reset_game():
 	score_p1 = 0
 	score_p2 = 0

@@ -1,11 +1,11 @@
-CanvasLayer
-CanvasGroup
 Button
 Label
+TextureRect
+ColorRect
+CanvasLayer
+CanvasGroup
 VBoxContainer
 Panel
 RichTextLabel
-ColorRect
-TextureRect
 FileDialog
 HBoxContainer

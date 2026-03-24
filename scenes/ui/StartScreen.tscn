@@ -232,12 +232,13 @@ script = ExtResource("1_8qqbg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1356448092]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 4.0
-offset_right = 1200.0
-offset_bottom = 728.0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 1271.0
+offset_bottom = 711.0
 texture = ExtResource("2_j8j1s")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Jugar" type="Button" parent="." unique_id=541314810]
 custom_minimum_size = Vector2(40, 0)
@@ -330,4 +331,5 @@ horizontal_alignment = 1
 uppercase = true
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Ranking" to="." method="_on_ranking_pressed"]
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

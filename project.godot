@@ -22,6 +22,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://scripts/core/game_manager.gd"
+QuestionLoader="*uid://cpacfpukaxvwv"
+RankingManager="*uid://lqt4qwtmfwc2"
 
 [display]
 
