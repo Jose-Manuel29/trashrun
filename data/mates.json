@@ -1,0 +1,44 @@
+[
+  {
+	"question": "¿Cuál es el resultado de la operación $2^3 + \\sqrt{144}$?",
+	"options": ["20", "22", "18", "24"],
+	"correct_index": 0,
+	"tema": "Aritmética"
+  },
+  {
+	"question": "En un triángulo rectángulo, si los catetos miden 3 cm y 4 cm, ¿cuánto mide la hipotenusa?",
+	"options": ["5 cm", "6 cm", "7 cm", "12 cm"],
+	"correct_index": 0,
+	"tema": "Geometría"
+  },
+  {
+	"question": "Resuelve para $x$ en la ecuación: $3x - 5 = 16$",
+	"options": ["x = 3", "x = 5", "x = 7", "x = 21"],
+	"correct_index": 2,
+	"tema": "Álgebra"
+  },
+  {
+	"question": "¿Cuál es el valor de $\\pi$ redondeado a dos decimales?",
+	"options": ["3.12", "3.16", "3.14", "3.41"],
+	"correct_index": 2,
+	"tema": "Constantes matemáticas"
+  },
+  {
+	"question": "¿A cuántos grados equivale la suma de los ángulos internos de un triángulo?",
+	"options": ["90°", "180°", "360°", "270°"],
+	"correct_index": 1,
+	"tema": "Geometría"
+  },
+  {
+	"question": "Si un conjunto tiene los elementos {2, 4, 6, 8}, ¿cuál es su promedio o media aritmética?",
+	"options": ["4", "5", "6", "10"],
+	"correct_index": 1,
+	"tema": "Estadística"
+  },
+  {
+	"question": "¿Cuál es el resultado de $(-5) \\times (-4) + (-2)$?",
+	"options": ["-22", "18", "22", "-18"],
+	"correct_index": 1,
+	"tema": "Aritmética"
+  }
+]

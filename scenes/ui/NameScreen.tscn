@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dgmtsno3hn5gu"]
 
-[ext_resource type="Texture2D" uid="uid://bcjpkr8prknur" path="res://assets/fondo/log.jpg" id="1_63ry6"]
 [ext_resource type="Script" uid="uid://bit87cvxn4gu5" path="res://scripts/ui/name_screen.gd" id="1_pj62m"]
+[ext_resource type="Texture2D" uid="uid://b0m2npry1mpgg" path="res://assets/persons/nom_f.png" id="2_hq2dn"]
 [ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="2_pj62m"]
+[ext_resource type="FontFile" uid="uid://bsg8u3sfpq01q" path="res://assets/fonts/Jersey15-Regular.ttf" id="4_c2chr"]
+[ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="5_3ujct"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ujct"]
 bg_color = Color(0.09803922, 0.09803922, 0.09803922, 0.5568628)
@@ -18,9 +20,33 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="FontVariation" id="FontVariation_mg3tt"]
+base_font = ExtResource("2_pj62m")
+
+[sub_resource type="FontVariation" id="FontVariation_osr5e"]
+base_font = ExtResource("2_pj62m")
+
+[sub_resource type="FontVariation" id="FontVariation_hscex"]
+base_font = ExtResource("2_pj62m")
+
+[sub_resource type="FontVariation" id="FontVariation_xiv2k"]
+base_font = ExtResource("4_c2chr")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pj62m"]
 
+[sub_resource type="FontVariation" id="FontVariation_m4cup"]
+base_font = ExtResource("4_c2chr")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2kk6v"]
+
+[sub_resource type="FontVariation" id="FontVariation_vd2g8"]
+base_font = ExtResource("5_3ujct")
+
+[sub_resource type="FontVariation" id="FontVariation_g2mml"]
+base_font = ExtResource("5_3ujct")
+
+[sub_resource type="FontVariation" id="FontVariation_k81ic"]
+base_font = ExtResource("2_pj62m")
 
 [node name="NameScreen" type="Control" unique_id=40951509]
 layout_mode = 3
@@ -29,105 +55,144 @@ script = ExtResource("1_pj62m")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=624394403]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 4.0
-offset_right = 1200.0
-offset_bottom = 716.0
-texture = ExtResource("1_63ry6")
+offset_left = 5.0
+offset_right = 1196.0
+offset_bottom = 712.0
+texture = ExtResource("2_hq2dn")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=626911948]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 50.0
-offset_right = 1338.0
-offset_bottom = 119.0
-theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
-theme_override_font_sizes/font_size = 30
-text = "Ingresa tu nombre y selecciona el modo de juego"
+offset_left = 404.0
+offset_top = 64.0
+offset_right = 826.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pj62m")
+theme_override_font_sizes/font_size = 26
+text = "Ingresa tu nombre y 
+selecciona el modo de juego"
+horizontal_alignment = 1
 
 [node name="BtnPsicologia" type="Button" parent="." unique_id=1559719065]
-modulate = Color(1, 1, 0.9490196, 1)
-self_modulate = Color(0.9843137, 1, 0.85490197, 0.7529412)
-custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 58.0
-offset_top = 411.0
-offset_right = 571.0
-offset_bottom = 578.0
-theme_override_constants/outline_size = 20
+offset_left = 542.0
+offset_top = 188.0
+offset_right = 677.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_pj62m")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ujct")
 text = "Psicologia"
 flat = true
 
 [node name="BtnResiduos" type="Button" parent="." unique_id=1892691687]
 self_modulate = Color(3.46821, 18.892157, 18.892157, 0.7764706)
-custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 622.0
-offset_top = 409.0
-offset_right = 1144.0
-offset_bottom = 579.0
-theme_override_constants/outline_size = 20
-theme_override_constants/h_separation = 4
+offset_left = 701.0
+offset_top = 189.0
+offset_right = 826.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_pj62m")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 23
 theme_override_styles/normal = SubResource("StyleBoxFlat_osr5e")
 text = "Residuos"
 flat = true
 
 [node name="return" type="Button" parent="." unique_id=361223551]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 633.0
-offset_right = 307.0
-offset_bottom = 681.0
+offset_left = 116.0
+offset_top = 637.0
+offset_right = 328.0
+offset_bottom = 685.0
+theme_override_fonts/font = SubResource("FontVariation_mg3tt")
 theme_override_font_sizes/font_size = 25
 text = "Regresar"
 flat = true
 
 [node name="jugar" type="Button" parent="." unique_id=1894140197]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 636.0
-offset_right = 712.0
+offset_left = 481.0
+offset_top = 638.0
+offset_right = 734.0
 offset_bottom = 685.0
 theme_override_colors/font_disabled_color = Color(0.8745098, 0.03529412, 0.8745098, 0.5019608)
+theme_override_fonts/font = SubResource("FontVariation_osr5e")
 theme_override_font_sizes/font_size = 25
 text = "	Jugar"
 flat = true
 
 [node name="salir" type="Button" parent="." unique_id=794514710]
 layout_mode = 0
-offset_left = 887.0
-offset_top = 636.0
-offset_right = 1102.0
-offset_bottom = 674.0
+offset_left = 889.0
+offset_top = 637.0
+offset_right = 1108.0
+offset_bottom = 686.0
+theme_override_fonts/font = SubResource("FontVariation_hscex")
 theme_override_font_sizes/font_size = 25
 text = "	Salir"
 flat = true
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1015465396]
 layout_mode = 0
-offset_left = 393.0
-offset_top = 212.0
-offset_right = 583.0
-offset_bottom = 248.0
+offset_left = 153.0
+offset_top = 496.0
+offset_right = 368.0
+offset_bottom = 532.0
+theme_override_fonts/font = SubResource("FontVariation_xiv2k")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pj62m")
 placeholder_text = "Jugador 1"
+alignment = 1
 
 [node name="LineEdit2" type="LineEdit" parent="." unique_id=756974594]
 layout_mode = 0
-offset_left = 629.0
-offset_top = 212.0
-offset_right = 830.0
-offset_bottom = 248.0
+offset_left = 843.0
+offset_top = 495.0
+offset_right = 1061.0
+offset_bottom = 531.0
+theme_override_fonts/font = SubResource("FontVariation_m4cup")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2kk6v")
 placeholder_text = "Jugador 2"
+alignment = 1
+
+[node name="BtnCargar" type="Button" parent="." unique_id=1784656684]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 184.0
+offset_right = 521.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_vd2g8")
+text = "Cargar/Editar"
+flat = true
+
+[node name="Label2" type="Label" parent="." unique_id=1529191395]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 180.0
+offset_right = 332.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_g2mml")
+theme_override_font_sizes/font_size = 24
+text = "Jugador 1"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=772921615]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 184.0
+offset_right = 1145.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_k81ic")
+theme_override_font_sizes/font_size = 24
+text = "Jugador 2"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="jugar" to="." method="_on_play_pressed"]

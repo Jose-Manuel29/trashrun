@@ -1,5 +1,110 @@
 [gd_scene format=3 uid="uid://xsca6wfm0jqt"]
 
-[node name="ResultScreen" type="Control"]
+[ext_resource type="Script" uid="uid://b47gan5kjwcql" path="res://scenes/ui/result_screen.gd" id="1_tw81d"]
+[ext_resource type="Texture2D" uid="uid://bfff50qjn1y52" path="res://scripts/ganador_fon.png" id="2_fasgb"]
+[ext_resource type="FontFile" uid="uid://dic64dfu3fh43" path="res://assets/fonts/BitcountGridDouble_Cursive-Medium.ttf" id="3_2ck2r"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="6_rikjr"]
+
+[sub_resource type="FontVariation" id="FontVariation_to58d"]
+base_font = ExtResource("3_2ck2r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xk7qx"]
+expand_margin_top = 5.0
+
+[sub_resource type="FontVariation" id="FontVariation_8uepe"]
+base_font = ExtResource("3_2ck2r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ne1lw"]
+expand_margin_top = 7.0
+
+[sub_resource type="FontVariation" id="FontVariation_oixbs"]
+base_font = ExtResource("6_rikjr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cv3x4"]
+expand_margin_left = 208.0
+expand_margin_top = 76.0
+expand_margin_right = 215.0
+expand_margin_bottom = 116.0
+
+[sub_resource type="FontVariation" id="FontVariation_1gikv"]
+base_font = ExtResource("3_2ck2r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvfs5"]
+modulate_color = Color(0.6753469, 0.9896324, 0.7060765, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_xy4xv"]
+base_font = ExtResource("3_2ck2r")
+
+[node name="ResultScreen" type="Control" unique_id=940931829]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_tw81d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=44865110]
+layout_mode = 0
+offset_right = 1202.0
+offset_bottom = 725.0
+texture = ExtResource("2_fasgb")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=1866842072]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 631.0
+offset_top = 607.0
+offset_right = 872.0
+offset_bottom = 685.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_to58d")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_xk7qx")
+
+[node name="Button2" type="Button" parent="TextureRect" unique_id=2114297903]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 352.0
+offset_top = 606.0
+offset_right = 611.0
+offset_bottom = 684.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_8uepe")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_ne1lw")
+
+[node name="LabelGanador" type="Label" parent="TextureRect" unique_id=1921578961]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 188.0
+offset_right = 848.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_oixbs")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_cv3x4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelPuntosJ1" type="Label" parent="TextureRect" unique_id=1056646051]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 490.0
+offset_right = 515.0
+offset_bottom = 537.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_1gikv")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxTexture_dvfs5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelPuntosJ2" type="Label" parent="TextureRect" unique_id=657028824]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 494.0
+offset_right = 948.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_xy4xv")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,12 @@
+[
+  {
+    "pregunta": "¿Cuál es la diferencia principal entre un dato y la información?",
+    "opciones": ["Ninguna", "El dato tiene significado", "La información es un conjunto de datos procesados", "Son lo mismo en bases de datos"],
+    "respuesta_correcta": 2
+  },
+  {
+    "pregunta": "¿Qué significan las siglas DBMS?",
+    "opciones": ["Database Management System", "Data Base Main Server", "Document Based Management System", "Data Backup Management System"],
+    "respuesta_correcta": 0
+  }
+]

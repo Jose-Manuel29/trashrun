@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://b8s1o3382tfc0"]
+
+[ext_resource type="Script" uid="uid://catu4ebkctcdn" path="res://game.gd" id="1_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://bnlob6jscebxp" path="res://fondooooooo.png" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://bney34b4kpr0o" path="res://fondooo.png" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://c2p216mtt33dm" path="res://Gemini_Generated_Image_t8me4gt8me4gt8me-removebg-preview.png" id="4_eow3j"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ryrav"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_wh1eiswh1eiswh1e-removebg-preview.png-3d2cba619d4983d852045ebefca631b5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eow3j"]
+texture = ExtResource("4_7jktm")
+
+[sub_resource type="Theme" id="Theme_j5wjh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vef74"]
+bg_color = Color(4.76472, 0.59346765, 0.77570677, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hve3p"]
+bg_color = Color(0.86014163, 0.86014163, 0.86014163, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfdv2"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotsf"]
+bg_color = Color(0, 4.1199718, 0.5090725, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Game" type="Node2D" unique_id=1750055680]
+script = ExtResource("1_fc0e3")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=681424558]
+position = Vector2(575.2358, 323.3587)
+scale = Vector2(0.77821225, 0.91091275)
+texture = ExtResource("2_fc0e3")
+
+[node name="Jugador1" type="Sprite2D" parent="." unique_id=2104834904]
+position = Vector2(75.99999, 143.00002)
+scale = Vector2(0.44372195, 0.4406996)
+texture = SubResource("CompressedTexture2D_ryrav")
+
+[node name="Jugador2" type="Sprite2D" parent="." unique_id=916338630]
+position = Vector2(1040, 132.00002)
+scale = Vector2(0.43670887, 0.39066458)
+texture = ExtResource("4_eow3j")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=727892064]
+
+[node name="PreguntasPanel" type="Panel" parent="UI" unique_id=1576023118]
+modulate = Color(0.12047366, 0.12047366, 0.12047366, 0.9843137)
+self_modulate = Color(7.8532085, 6.607142, 6.85194, 1)
+z_index = 5
+anchors_preset = -1
+anchor_left = 0.47700003
+anchor_top = 0.30600002
+anchor_right = 0.47700003
+anchor_bottom = 0.30600002
+offset_left = -205.50403
+offset_top = -74.28801
+offset_right = 214.49597
+offset_bottom = 187.71199
+theme_override_styles/panel = SubResource("StyleBoxTexture_eow3j")
+
+[node name="PreguntaLabel" type="Label" parent="UI/PreguntasPanel" unique_id=1425708026]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49600002
+anchor_top = 0.28500003
+anchor_right = 0.49600002
+anchor_bottom = 0.28500003
+offset_left = -163.08801
+offset_top = -48.960007
+offset_right = 162.91199
+offset_bottom = 49.039993
+theme_type_variation = &"HeaderLarge"
+text = "¿Cuantos huesos tiene el cuerpo humano?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 171
+text_overrun_behavior = 6
+
+[node name="ContenedorRespuestas" type="GridContainer" parent="UI/PreguntasPanel" unique_id=1489604412]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49400002
+anchor_top = 1.59
+anchor_right = 0.49400002
+anchor_bottom = 1.59
+offset_left = -171.48003
+offset_top = -270.58002
+offset_right = 177.51999
+offset_bottom = -182.58002
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="Button" type="Button" parent="UI/PreguntasPanel/ContenedorRespuestas" unique_id=1964779420]
+modulate = Color(1.441817, 0.27711022, 0.23772402, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_j5wjh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vef74")
+
+[node name="Button2" type="Button" parent="UI/PreguntasPanel/ContenedorRespuestas" unique_id=2003912305]
+modulate = Color(1.1480067, 3.9812129, 9.302855, 1)
+self_modulate = Color(0.2700815, 0.18735266, 0.79350376, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 9.92
+theme_override_styles/normal = SubResource("StyleBoxFlat_hve3p")
+
+[node name="Button3" type="Button" parent="UI/PreguntasPanel/ContenedorRespuestas" unique_id=1516669316]
+modulate = Color(18.892157, 18.892157, 1.9187722, 1)
+self_modulate = Color(18.540012, 18.68087, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfdv2")
+
+[node name="Button4" type="Button" parent="UI/PreguntasPanel/ContenedorRespuestas" unique_id=1945868462]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+self_modulate = Color(0.027589304, 0.06136895, 0.0102093825, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_iotsf")

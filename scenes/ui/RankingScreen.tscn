@@ -1,5 +1,89 @@
 [gd_scene format=3 uid="uid://djcg620hlmd83"]
 
-[node name="RankingScreen" type="Control"]
+[ext_resource type="Script" uid="uid://bqr865g52qvsq" path="res://scripts/ui/ranking_screen.gd" id="1_5dxim"]
+[ext_resource type="Texture2D" uid="uid://c76mek64752t5" path="res://scenes/ui/ran_f.png" id="2_5dxim"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="3_ixmv8"]
+[ext_resource type="Texture2D" uid="uid://c35gqqxi7cb5u" path="res://scripts/core/boton_A.png" id="4_ixmv8"]
+
+[sub_resource type="FontVariation" id="FontVariation_5hb6l"]
+base_font = ExtResource("3_ixmv8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_net5a"]
+texture = ExtResource("4_ixmv8")
+expand_margin_left = 47.0
+expand_margin_top = 5.0
+expand_margin_right = 47.0
+expand_margin_bottom = 5.0
+modulate_color = Color(0.27716845, 0.43707934, 0.79840535, 1)
+
+[node name="RankingScreen" type="Control" unique_id=694117125]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_5dxim")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=493605045]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 1199.0
+offset_bottom = 716.0
+texture = ExtResource("2_5dxim")
+expand_mode = 1
+
+[node name="Nombre1" type="Label" parent="TextureRect" unique_id=752939763]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 226.0
+offset_right = 788.0
+offset_bottom = 258.0
+text = "P"
+
+[node name="Nombre2" type="Label" parent="TextureRect" unique_id=2122743715]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 296.0
+offset_right = 784.0
+offset_bottom = 334.0
+
+[node name="Nombre3" type="Label" parent="TextureRect" unique_id=454347749]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 359.0
+offset_right = 783.0
+offset_bottom = 393.0
+
+[node name="Nombre4" type="Label" parent="TextureRect" unique_id=606979597]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 423.0
+offset_right = 780.0
+offset_bottom = 459.0
+
+[node name="Nombre5" type="Label" parent="TextureRect" unique_id=1380098487]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 488.0
+offset_right = 782.0
+offset_bottom = 527.0
+
+[node name="Nombre6" type="Label" parent="TextureRect" unique_id=1620055696]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 554.0
+offset_right = 779.0
+offset_bottom = 593.0
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=728915241]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 616.0
+offset_right = 141.0
+offset_bottom = 681.0
+theme_override_fonts/font = SubResource("FontVariation_5hb6l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_net5a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_net5a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_net5a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_net5a")
+text = "Rregresar"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

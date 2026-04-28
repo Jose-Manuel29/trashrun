@@ -1,0 +1,11 @@
+res://scenes/common/ButtonPrimary.tscn::74a72d939dc66c96728ea4dc18284250::1776284952::res://.godot/exported/133200997/export-7bee6a40805eaa96793458927f709c16-ButtonPrimary.scn
+res://scenes/common/PlayerPanel.tscn::f975e674f59e2097ca0ba6f203e3d165::1776284952::res://.godot/exported/133200997/export-0e30924b48d74c0a54f0396a0479433c-PlayerPanel.scn
+res://scenes/core/GameManager.tscn::a4be3a53b66b2eea0841700e135f4be6::1776284952::res://.godot/exported/133200997/export-b2ade8ceea731889c30eb04dad6461d0-GameManager.scn
+res://scenes/ui/CategoryScreen.tscn::6d94c46342bcba26a9e1308016236536::1776284952::res://.godot/exported/133200997/export-1b0bc0b3fbb49a7e605163ad500ad934-CategoryScreen.scn
+res://scenes/ui/NameScreen.tscn::97533f8b23a2e3130e9587f11913f9e1::1776311987::res://.godot/exported/133200997/export-1b984a13bc12ec1a6bef3361960015d8-NameScreen.scn
+res://scenes/ui/pausemenu.tscn::e4380cfe2a3c6e99adda7d49eda15e7a::1776360903::res://.godot/exported/133200997/export-fdfef7d125281aca387b8ba64787ee32-pausemenu.scn
+res://scenes/ui/QuestionScreen.tscn::fa2b843c758550895ceb855904a2a7b9::1776956274::res://.godot/exported/133200997/export-118ca69f971e99571d4fbc3d8393d9e4-QuestionScreen.scn
+res://scenes/ui/RankingScreen.tscn::149d8247ab4f98314eab00ab2b2cd949::1776923671::res://.godot/exported/133200997/export-05604d218260d47fc4ac3c180b8d91a8-RankingScreen.scn
+res://scenes/ui/ResultScreen.tscn::5553a7687e8b2ff24203dcecd9476c5c::1776923067::res://.godot/exported/133200997/export-1b2addc5123ee419445baa429c57382d-ResultScreen.scn
+res://scenes/ui/SettingsScreen.tscn::76e9be51703a34f009fe622f90a2e316::1776923549::res://.godot/exported/133200997/export-6333271f3d2d9f527e41ee8abe8ee82e-SettingsScreen.scn
+res://scenes/ui/StartScreen.tscn::078de6ed07e70320f96a229831295a95::1776923351::res://.godot/exported/133200997/export-260d66d29b8ebad96d74b9ba4f2c015e-StartScreen.scn

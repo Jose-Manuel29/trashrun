@@ -1,5 +1,102 @@
 [gd_scene format=3 uid="uid://d1hcvsw76xdk5"]
 
-[node name="SettingsScreen" type="Control"]
+[ext_resource type="Script" uid="uid://dwfp5cmpflolw" path="res://scenes/ui/settings_screen.gd" id="1_ajtmc"]
+[ext_resource type="Texture2D" uid="uid://dwptw5c6knl3d" path="res://scenes/ui/confi_fo.png" id="2_o7p01"]
+[ext_resource type="FontFile" uid="uid://d2emu6y8xgpgc" path="res://scripts/ui/BitcountGridDouble_Cursive-Medium.ttf" id="3_o7p01"]
+
+[sub_resource type="FontVariation" id="FontVariation_ejgwm"]
+base_font = ExtResource("3_o7p01")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyxc4"]
+
+[sub_resource type="FontVariation" id="FontVariation_o7p01"]
+base_font = ExtResource("3_o7p01")
+
+[sub_resource type="FontVariation" id="FontVariation_gyxc4"]
+base_font = ExtResource("3_o7p01")
+
+[sub_resource type="FontVariation" id="FontVariation_6etu7"]
+base_font = ExtResource("3_o7p01")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fq24e"]
+bg_color = Color(0.27450982, 0.27450982, 0.27450982, 0)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="SettingsScreen" type="Control" unique_id=745088672]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_ajtmc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2119743333]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -4.0
+offset_right = 1198.0
+offset_bottom = 720.0
+texture = ExtResource("2_o7p01")
+expand_mode = 1
+
+[node name="BtnSalir" type="Button" parent="TextureRect" unique_id=228505629]
+layout_mode = 0
+offset_left = 758.0
+offset_top = 612.0
+offset_right = 923.0
+offset_bottom = 662.0
+theme_override_fonts/font = SubResource("FontVariation_ejgwm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gyxc4")
+text = "SALIR"
+flat = true
+
+[node name="BtnRegresar" type="Button" parent="TextureRect" unique_id=1727511009]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 608.0
+offset_right = 448.0
+offset_bottom = 662.0
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("FontVariation_o7p01")
+theme_override_font_sizes/font_size = 16
+text = "REGRESAR"
+flat = true
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1278440682]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 59.0
+offset_right = 840.0
+offset_bottom = 141.0
+theme_override_fonts/font = SubResource("FontVariation_gyxc4")
+theme_override_font_sizes/font_size = 50
+text = "CONFIGURACIÓN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1212722245]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 257.0
+offset_right = 727.0
+offset_bottom = 422.0
+
+[node name="BtnCargarJSON" type="Button" parent="VBoxContainer" unique_id=1451819465]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_6etu7")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_fq24e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fq24e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fq24e")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fq24e")
+text = "Cargar 
+JSON de 
+preguntas"
+
+[node name="LabelEstado" type="Label" parent="VBoxContainer" unique_id=1268309444]
+layout_mode = 2
+
+[node name="FileDialogJSON" type="FileDialog" parent="." unique_id=593074697]

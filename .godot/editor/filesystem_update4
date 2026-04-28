@@ -1,0 +1,4 @@
+res://scenes/ui/QuestionScreen.tscn
+res://scripts/ui/start_screen.gd
+res://scenes/ui/StartScreen.tscn
+res://data/mates.json
