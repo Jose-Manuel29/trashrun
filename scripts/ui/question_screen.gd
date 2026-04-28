@@ -33,7 +33,7 @@ var paso_j2 = 0
 var pregunta_actual = {}
 var tiempo_restante = 10
 
-# --- NUEVO SISTEMA ---
+# --- SISTEMA SIMULTÁNEO ---
 var respondio_j1 = false
 var respondio_j2 = false
 
@@ -69,31 +69,23 @@ func _process(delta):
 	# PLAYER 1
 	if not respondio_j1:
 		if Input.is_action_just_pressed("p1_a"):
-			print("Jugador 1 presionó: q")
 			responder(1, 0)
 		elif Input.is_action_just_pressed("p1_b"):
-			print("Jugador 1 presionó: w")
 			responder(1, 1)
 		elif Input.is_action_just_pressed("p1_c"):
-			print("Jugador 1 presionó: e")
 			responder(1, 2)
 		elif Input.is_action_just_pressed("p1_d"):
-			print("Jugador 1 presionó: r")
 			responder(1, 3)
 
 	# PLAYER 2
 	if not respondio_j2:
 		if Input.is_action_just_pressed("p2_a"):
-			print("Jugador 2 presionó: u")
 			responder(2, 0)
 		elif Input.is_action_just_pressed("p2_b"):
-			print("Jugador 2 presionó: i")
 			responder(2, 1)
 		elif Input.is_action_just_pressed("p2_c"):
-			print("Jugador 2 presionó: o")
 			responder(2, 2)
 		elif Input.is_action_just_pressed("p2_d"):
-			print("Jugador 2 presionó: p")
 			responder(2, 3)
 
 # ----------------------------
@@ -126,7 +118,7 @@ func cargar_nueva_pregunta():
 		else:
 			lista_botones[i].visible = false
 
-	# RESET SISTEMA
+	# RESET
 	respondio_j1 = false
 	respondio_j2 = false
 
@@ -155,7 +147,7 @@ func responder(jugador, indice):
 		tiempo_j2 = 10 - tiempo_restante
 		respuesta_j2 = indice
 
-	# Si ambos responden → terminar antes
+	# Si ambos responden → termina antes
 	if respondio_j1 and respondio_j2:
 		finalizar_pregunta()
 
@@ -172,6 +164,7 @@ func finalizar_pregunta():
 	var correcta_j1 = respuesta_j1 == correcta_index
 	var correcta_j2 = respuesta_j2 == correcta_index
 
+	# PUNTOS
 	if correcta_j1:
 		puntos_j1 = calcular_puntos(tiempo_j1)
 
@@ -188,10 +181,20 @@ func finalizar_pregunta():
 
 	actualizar_score()
 
+	# PROGRESO
 	actualizar_progreso(1, correcta_j1)
 	actualizar_progreso(2, correcta_j2)
 
-	await get_tree().create_timer(1.0).timeout
+	# 🔥 MOVIMIENTO
+	await get_tree().create_timer(0.5).timeout
+
+	if not correcta_j1:
+		bajar_jugador(1)
+
+	if not correcta_j2:
+		bajar_jugador(2)
+
+	await get_tree().create_timer(0.8).timeout
 	cargar_nueva_pregunta()
 
 # ----------------------------
@@ -211,6 +214,27 @@ func actualizar_progreso(jugador, correcta):
 	if indice < contenedor.get_child_count():
 		var rect = contenedor.get_child(indice)
 		rect.color = Color.GREEN if correcta else Color.RED
+
+# ----------------------------
+
+func bajar_jugador(num):
+	var tween = create_tween()
+
+	if num == 1:
+		paso_j1 += 1
+		var nodo = "PosicionJ2_" + str(paso_j1)
+		if has_node(nodo):
+			tween.tween_property(jugador1, "global_position", get_node(nodo).global_position, 0.5)
+		else:
+			game_over("Eliminado " + GameManager.player1_name, GameManager.player2_name)
+
+	else:
+		paso_j2 += 1
+		var nodo = "PosicionJ1_" + str(paso_j2)
+		if has_node(nodo):
+			tween.tween_property(jugador2, "global_position", get_node(nodo).global_position, 0.5)
+		else:
+			game_over("Eliminado " + GameManager.player2_name, GameManager.player1_name)
 
 # ----------------------------
 
@@ -251,7 +275,5 @@ func _on_pausa_pressed():
 
 # ----------------------------
 
-# (Opcional) mantener por compatibilidad con botones UI
 func boton_presionado(indice):
 	pass
-	
